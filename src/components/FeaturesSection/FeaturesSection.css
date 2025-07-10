@@ -1,0 +1,12 @@
+/* El contenedor para la grilla de tarjetas */
+.container-features {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 3rem;
+	padding: 3rem 0;
+	/* Para centrarlo, asegúrate de tener una clase .container global o añade estas líneas: */
+	max-width: 1200px;
+	margin: 0 auto;
+	padding-left: 15px; /* Pequeño padding para que no se pegue a los bordes */
+	padding-right: 15px;
+}
