@@ -1,5 +1,6 @@
 import './App.css';
 import Header from './components/Header/Header';
+import Banner from './components/Banner/Banner';
 
 function App() {
   return (
@@ -7,7 +8,7 @@ function App() {
     <>
       <Header />
       <main className="main-content">
-        {/* Aquí irá el resto del contenido de la página */}
+        <Banner />
       </main>
     </>
   );
