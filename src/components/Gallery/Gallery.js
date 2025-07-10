@@ -7,7 +7,7 @@ import galleryImg1 from '../../assets/Pecera 1.jpg';
 import galleryImg2 from '../../assets/pecera2.jpg';
 import galleryImg3 from '../../assets/pecera3.png';
 import galleryImg4 from '../../assets/pecera4.png';
-import galleryImg5 from '../../assets/Pecera5.jpg';
+import galleryImg5 from '../../assets/pecera5.jpg';
 
 // 2. Crea un array con los datos de las imágenes para que sea más fácil de manejar.
 const galleryImages = [
