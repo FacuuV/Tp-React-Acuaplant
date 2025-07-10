@@ -5,6 +5,7 @@ import FeaturesSection from './components/FeaturesSection/FeaturesSection';
 import TopCategories from './components/TopCategories/TopCategories';
 import ProductsSection from './components/ProductsSection/ProductsSection';
 import Gallery from './components/Gallery/Gallery';
+import AccessoriesSection from './components/AccessoriesSection/AccessoriesSection';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <TopCategories />
         <ProductsSection />
         <Gallery />
+        <AccessoriesSection />
       </main>
     </div>
   );
