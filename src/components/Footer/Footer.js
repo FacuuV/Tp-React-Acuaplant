@@ -1,10 +1,6 @@
 import React from 'react';
-import './Footer.css';
-
-// Asegúrate de que la ruta a tu imagen de pagos sea correcta.
+import './Footer.css';.
 import paymentImg from '../../assets/payment.png';
-
-// Datos para los enlaces y los íconos
 const infoLinks = [
 	'Acerca de Nosotros',
 	'Información de Pedidos',
