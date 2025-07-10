@@ -1,8 +1,9 @@
 /* ************* NAVBAR ************* */
 .container-navbar {
 	background-color: var(--primary-color);
+	border-top: 1px solid #e2e2e2; /* Para separar visualmente del header superior */
+	position: relative; /* Hacemos que este sea el 'ancla' para el menú desplegable */
 }
-
 .navbar {
 	display: flex;
 	justify-content: space-between;
@@ -55,7 +56,7 @@
 
 .search-form {
 	position: relative;
-	display: flex; 
+	display: flex; /* Añadido para que align-items funcione */
 	align-items: center;
 	border: 2px solid #000000;
 	border-radius: 2rem;
@@ -73,7 +74,7 @@
 	padding: 0 2rem;
 	color: #777;
 	cursor: pointer;
-	background-color: transparent; 
+	background-color: transparent; /* Asegura que el fondo del input sea transparente */
 }
 
 .search-form input::-webkit-search-cancel-button {
@@ -87,8 +88,9 @@
 	align-items: center;
 	justify-content: center;
 	height: 100%;
-	padding: 1rem;
-	cursor: pointer; 
+	width: 4.4rem; /* Hacemos el botón cuadrado para que coincida con la altura */
+	padding: 0; /* Quitamos el padding para que flexbox centre el icono perfectamente */
+	cursor: pointer; /* Añadido para que el botón parezca un botón */
 }
 
 .btn-search i {
@@ -96,3 +98,55 @@
 	color: #fff;
 }
 
+/* ********************************** */
+/*        MEDIA QUERIES (MÓVIL)       */
+/* ********************************** */
+@media (max-width: 768px) {
+	/* Mostramos el icono de hamburguesa */
+	.navbar .fa-bars {
+		display: block;
+		font-size: 2.5rem;
+		cursor: pointer;
+	}
+
+	/* Ocultamos el menú por defecto */
+	.menu {
+		/* Posicionamiento y estilos para el menú desplegable */
+		position: absolute;
+		top: 100%; /* Justo debajo de la barra de navegación */
+		left: 0;
+		width: 100%;
+		background-color: rgba(255, 255, 255, 0.85); /* Fondo blanco semi-transparente */
+		backdrop-filter: blur(5px); /* Efecto de desenfoque para el contenido de atrás */
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+		z-index: 1000; /* Para que aparezca por encima de todo */
+
+		/* Lógica para la animación */
+		display: flex; /* Lo mantenemos como flex para que los items se ordenen */
+		flex-direction: column;
+		overflow: hidden; /* Oculta el contenido que se desborda */
+		max-height: 0; /* El menú empieza con altura 0 (cerrado) */
+		padding: 0 2rem; /* Sin padding vertical cuando está cerrado */
+		transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+	}
+
+	/* Cuando el menú tiene la clase 'active', lo mostramos */
+	.menu.active {
+		/* Al estar activo, le damos una altura máxima para que se despliegue */
+		max-height: 30rem; /* Un valor suficientemente grande */
+		padding: 1rem 2rem; /* Le devolvemos el padding vertical */
+	}
+
+	.menu a {
+		color: var(--dark-color);
+	}
+
+	/* Ajustamos el buscador en móvil */
+	.search-form {
+		margin-left: auto; /* Empuja el buscador hacia la derecha */
+	}
+
+	.search-form input {
+		width: 12rem; /* Un ancho más mediano y adecuado para móviles */
+	}
+}

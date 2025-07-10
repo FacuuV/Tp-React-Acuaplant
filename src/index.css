@@ -24,6 +24,8 @@ body {
   /* Mantenemos estas líneas para un renderizado de fuentes más suave */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* Evita el desbordamiento horizontal y la barra de scroll lateral */
+  overflow-x: hidden;
 }
 
 /* ********************************** */
