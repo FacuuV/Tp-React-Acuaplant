@@ -18,6 +18,7 @@ const galleryImages = [
 	{ src: galleryImg2, alt: 'Gallery Img5', className: 'gallery-img-5' },
 ];
 
+
 const Gallery = () => {
 	return (
 		<section className='gallery container'>
