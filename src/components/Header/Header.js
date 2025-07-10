@@ -1,6 +1,6 @@
 import React from 'react';
 import './Header.css';
-
+import Navbar from '../Navbar/Navbar';
 const Header = () => {
   return (
     <header>
@@ -29,6 +29,7 @@ const Header = () => {
           </div>
         </div>
       </div>
+            <Navbar />
     </header>
   );
 };
