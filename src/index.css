@@ -44,3 +44,8 @@ body {
 	font-weight: 500;
 	font-size: 3rem;
 }
+
+/* Aplicamos el color de fondo a la sección principal */
+.main-content {
+	background-color: var(--background-color);
+}

@@ -1,12 +1,10 @@
-/* El contenedor para la grilla de tarjetas */
 .container-features {
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	gap: 3rem;
-	padding: 3rem 0;
-	/* Para centrarlo, asegúrate de tener una clase .container global o añade estas líneas: */
-	max-width: 1200px;
-	margin: 0 auto;
-	padding-left: 15px; /* Pequeño padding para que no se pegue a los bordes */
-	padding-right: 15px;
+    display: flex;
+    justify-content: space-around;
+    gap: 1.5rem; /* Reducimos el espacio entre tarjetas */
+    padding: 4rem 0;
+    /* El color de fondo se hereda de .main-content, 
+       así que no es necesario ponerlo aquí de nuevo
+       a menos que quieras un color diferente para esta sección. */
+    flex-wrap: wrap;
 }
