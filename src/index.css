@@ -1,13 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Define variables globales para colores, etc. */
+:root {
+	--primary-color: #9aedf8;
+	--background-color: #7abefd;
+	--dark-color: #151515;
+}
+
+html {
+  /* Hacemos que 1rem = 10px para que sea más fácil calcular tamaños */
+	font-size: 62.5%;
+	font-family: 'Poppins', sans-serif;
+}
+
+/* Reseteo básico para quitar márgenes y paddings por defecto de los navegadores */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  /* Mantenemos estas líneas para un renderizado de fuentes más suave */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* ********************************** */
+/*             UTILIDADES             */
+/* ********************************** */
+.container {
+	max-width: 120rem; /* 1200px */
+	margin: 0 auto;
+  /* Padding para que el contenido no se pegue a los bordes en móvil */
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.heading-1 {
+	text-align: center;
+	font-weight: 500;
+	font-size: 3rem;
 }

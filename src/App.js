@@ -1,13 +1,16 @@
 import './App.css';
+import Header from './components/Header/Header';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Mi Proyecto Migrado a React</h1>
-      {/* Aquí comenzaremos a agregar nuestros componentes */}
-    </div>
+    // Usamos un Fragment (<>...</>) para no añadir un div extra al DOM
+    <>
+      <Header />
+      <main className="main-content">
+        {/* Aquí irá el resto del contenido de la página */}
+      </main>
+    </>
   );
 }
 
 export default App;
-
