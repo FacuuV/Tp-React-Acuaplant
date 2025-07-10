@@ -1,7 +1,6 @@
 import React from 'react';
 import './FeatureCard.css';
 
-// Este componente recibe el icono, título y descripción y los muestra.
 const FeatureCard = ({ iconClass, title, description }) => {
   return (
     <div className="card-feature">

@@ -1,18 +1,13 @@
 .card-feature {
 	display: flex;
 	align-items: center;
-	/* Cambiamos a flex-start para alinear el contenido a la izquierda */
 	justify-content: flex-start;
-	gap: 1.2rem; /* Reducimos el espacio entre el ícono y el texto */
-
+	gap: 1.2rem; 
 	background-color: #ffffff;
 	border-radius: 1rem;
-	/* Reducimos el padding para hacer las tarjetas más finas */
 	padding: 2rem;
-
-	/* Hacemos que las tarjetas sean flexibles y tengan un ancho mínimo */
 	flex: 1;
-	min-width: 22rem; /* 220px, para que se vean más chicas */
+	min-width: 22rem; 
 }
 
 .card-feature i {

@@ -2,7 +2,7 @@ import React from 'react';
 import './AccessoriesSection.css';
 import ProductCard from '../ProductCard/ProductCard';
 
-// Importa las imágenes de los accesorios
+// imagenes de los accesorios//
 import filtroImg from '../../assets/filtro1.jpg';
 import peceraImg from '../../assets/pecera1.jpg';
 import comidaImg from '../../assets/Comida1.jpg';

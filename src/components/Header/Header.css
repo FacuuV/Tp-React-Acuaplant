@@ -70,19 +70,15 @@
 /* ********************************** */
 /*        MEDIA QUERIES (MÓVIL)       */
 /* ********************************** */
-/* Para pantallas de hasta 768px de ancho (tablets y móviles) */
+/* Para pantallas de hasta 768px de ancho (celus) */
 @media (max-width: 768px) {
 	.hero {
-		/* Hacemos el layout flexible y centrado para móviles */
 		flex-wrap: wrap;
 		justify-content: center;
 		gap: 3rem;
 		padding: 2rem 0;
-	/* Mantenemos la fila única y ajustamos el espacio entre los 3 bloques principales */
 		gap: 2rem;
 	}
-
-	/* Reducimos el tamaño de los iconos y textos para que quepan mejor */
 	.customer-support i,
 	.container-logo i,
 	.container-user .fa-user,
@@ -91,8 +87,6 @@
 		font-size: 2.2rem;
 		font-size: 2.4rem;
 	}
-
-	/* Ocultamos los textos menos críticos en móvil para que todo quepa en una fila */
 	.content-customer-support .text,
 	.content-shopping-cart .text {
 		display: none;

@@ -11,7 +11,6 @@
 
 .container-categories {
 	display: grid;
-	/* Hacemos el grid responsivo para que se adapte a diferentes pantallas */
 	grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
 	gap: 3rem;
 }
@@ -24,7 +23,6 @@
 	justify-content: center;
 	border-radius: 2rem;
 	gap: 2rem;
-	/* Los estilos de la imagen de fondo se aplican desde el componente JS */
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;

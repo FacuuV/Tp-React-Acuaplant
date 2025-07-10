@@ -146,7 +146,7 @@
 	font-weight: 600;
 	font-size: 1.6rem;
 	cursor: pointer;
-	color: #0d47a1; /* Un color azul oscuro, llamativo y legible */
+	color: #0d47a1; 
 	transition: color 0.3s ease;
 }
 
@@ -158,7 +158,7 @@
 	font-size: 1.3rem;
 	color: #666;
 	font-weight: 400;
-	min-height: 5rem; /* Para alinear las tarjetas aunque la descripción varíe */
+	min-height: 5rem; 
 }
 
 .footer-card {

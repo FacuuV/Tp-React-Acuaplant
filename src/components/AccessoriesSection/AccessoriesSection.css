@@ -7,10 +7,3 @@
 	gap: 2rem;
 	margin-bottom: 3rem;
 }
-
-/*
-  ¡Buena noticia! El resto de los estilos para las tarjetas
-  (.card-product, .container-products, etc.) ya se están
-  aplicando desde el componente reutilizable ProductCard.css.
-  No es necesario repetirlos aquí.
-*/

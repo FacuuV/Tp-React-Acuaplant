@@ -2,7 +2,6 @@ import React from 'react';
 import FeatureCard from '../FeatureCard/FeatureCard';
 import './FeaturesSection.css';
 
-// Aquí están los datos de tus 4 tarjetas.
 const featuresData = [
   {
     id: 1,

@@ -1,14 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import './ProductsSection.css';
-
-// 1. Importa las imágenes de los productos.
-//    Asegúrate de que las rutas sean correctas.
 import pezGuppyImg from '../../assets/pezguppy.jpg';
 import blueParrotImg from '../../assets/blueparrot.jpg';
 import pezCorydoraImg from '../../assets/pezcorydora.jpg';
 import pezGuramiImg from '../../assets/pez-gurami.jpg';
-
-// 2. Crea un array con los datos de los productos.
 const products = [
 	{
 		name: 'Pez Guppy',
@@ -41,8 +36,6 @@ const products = [
 		description: 'Especie atractiva y de comportamiento interesante. Ideal para acuarios comunitarios.',
 	},
 ];
-
-// 3. Componente para renderizar una tarjeta de producto individual.
 const ProductCard = ({ product }) => (
 	<div className='card-product'>
 		<div className='container-img'>
@@ -72,19 +65,13 @@ const ProductCard = ({ product }) => (
 		</div>
 	</div>
 );
-
-// 4. Componente principal de la sección.
 const ProductsSection = () => {
-	// Estado para el filtro activo ('Destacados', 'Más recientes', etc.)
 	const [activeFilter, setActiveFilter] = useState('Destacados');
-	// Estado para la lista de productos que se muestra en la UI
 	const [filteredProducts, setFilteredProducts] = useState(products);
 
 	const filterOptions = ['Destacados', 'Más recientes', 'Mejores Valorados'];
 
-	// Este "efecto" se ejecuta cada vez que el usuario cambia el filtro
 	useEffect(() => {
-		// Hacemos una copia para no modificar el array original
 		let sortedProducts = [...products];
 
 		switch (activeFilter) {
@@ -97,7 +84,6 @@ const ProductsSection = () => {
 				break;
 			case 'Destacados':
 			default:
-				// Para 'Destacados', usamos el orden original
 				sortedProducts = [...products];
 				break;
 		}

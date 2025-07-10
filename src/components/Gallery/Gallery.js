@@ -1,15 +1,11 @@
 import React from 'react';
 import './Gallery.css';
-
-// 1. Importa las imágenes que usarás en la galería.
-//    Asegúrate de que las rutas a tus imágenes sean correctas.
 import galleryImg1 from '../../assets/Pecera 1.jpg';
 import galleryImg2 from '../../assets/pecera2.jpg';
 import galleryImg3 from '../../assets/pecera3.png';
 import galleryImg4 from '../../assets/pecera4.png';
 import galleryImg5 from '../../assets/pecera5.jpg';
 
-// 2. Crea un array con los datos de las imágenes para que sea más fácil de manejar.
 const galleryImages = [
 	{ src: galleryImg1, alt: 'Gallery Img1', className: 'gallery-img-1' },
 	{ src: galleryImg3, alt: 'Gallery Img2', className: 'gallery-img-2' },

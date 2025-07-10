@@ -1,8 +1,8 @@
 /* ************* NAVBAR ************* */
 .container-navbar {
 	background-color: var(--primary-color);
-	border-top: 1px solid #e2e2e2; /* Para separar visualmente del header superior */
-	position: relative; /* Hacemos que este sea el 'ancla' para el menú desplegable */
+	border-top: 1px solid #e2e2e2; 
+	position: relative; 
 }
 .navbar {
 	display: flex;
@@ -56,7 +56,7 @@
 
 .search-form {
 	position: relative;
-	display: flex; /* Añadido para que align-items funcione */
+	display: flex; 
 	align-items: center;
 	border: 2px solid #000000;
 	border-radius: 2rem;
@@ -74,7 +74,7 @@
 	padding: 0 2rem;
 	color: #777;
 	cursor: pointer;
-	background-color: transparent; /* Asegura que el fondo del input sea transparente */
+	background-color: transparent; 
 }
 
 .search-form input::-webkit-search-cancel-button {
@@ -88,9 +88,9 @@
 	align-items: center;
 	justify-content: center;
 	height: 100%;
-	width: 4.4rem; /* Hacemos el botón cuadrado para que coincida con la altura */
-	padding: 0; /* Quitamos el padding para que flexbox centre el icono perfectamente */
-	cursor: pointer; /* Añadido para que el botón parezca un botón */
+	width: 4.4rem; 
+	padding: 0; 
+	cursor: pointer; 
 }
 
 .btn-search i {
@@ -99,62 +99,53 @@
 }
 
 /* ********************************** */
-/*        MEDIA QUERIES (MÓVIL)       */
+/*        MEDIA QUERIES (celus)       */
 /* ********************************** */
 @media (max-width: 768px) {
-	/* Mostramos el icono de hamburguesa */
+	/* icono hamburguesa */
 	.navbar .fa-bars {
 		display: block;
 		font-size: 2.5rem;
 		cursor: pointer;
 	}
 
-	/* Ocultamos el menú por defecto */
+	/* se oculta menu */
 	.menu {
-		/* Posicionamiento y estilos para el menú desplegable */
 		position: absolute;
-		top: 100%; /* Justo debajo de la barra de navegación */
+		top: 100%; 
 		left: 0;
 		width: 100%;
 		/* Fondo oscuro y semi-transparente para ver el banner */
 		background-color: rgba(0, 0, 0, 0.301);
-		backdrop-filter: blur(10px); /* Efecto de desenfoque para el contenido de atrás */
+		backdrop-filter: blur(10px); 
 		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-		z-index: 1000; /* Para que aparezca por encima de todo */
+		z-index: 1000; 
 
-		/* Lógica para la animación */
-		display: flex; /* Lo mantenemos como flex para que los items se ordenen */
+		/* animacion */
+		display: flex; 
 		flex-direction: column;
-		overflow: hidden; /* Oculta el contenido que se desborda */
-		max-height: 0; /* El menú empieza con altura 0 (cerrado) */
-		padding: 0 2rem; /* Sin padding vertical cuando está cerrado */
+		overflow: hidden; 
+		max-height: 0; 
+		padding: 0 2rem; 
 		transition: max-height 0.4s ease-out, padding 0.4s ease-out, background-color 0.3s;
-		align-items: center; /* Centra los elementos del menú horizontalmente */
+		align-items: center; 
 	}
-
-	/* Cuando el menú tiene la clase 'active', lo mostramos */
 	.menu.active {
-		/* Al estar activo, le damos una altura máxima para que se despliegue */
-		max-height: 30rem; /* Un valor suficientemente grande */
-		padding: 1rem 2rem; /* Le devolvemos el padding vertical */
+		max-height: 30rem; 
+		padding: 1rem 2rem;
 	}
-
 	.menu a {
-		color: #fff; /* Texto blanco para que se lea bien sobre el fondo oscuro */
-		padding: 1.2rem 0; /* Espaciado vertical para que sea fácil de tocar */
+		color: #fff; 
+		padding: 1.2rem 0; 
 	}
-
 	.menu a:hover,
 	.menu a:focus {
-		color: var(--primary-color); /* Color de resaltado al pasar el mouse o seleccionar */
+		color: var(--primary-color); 
 	}
-
-	/* Ajustamos el buscador en móvil */
 	.search-form {
-		margin-left: auto; /* Empuja el buscador hacia la derecha */
+		margin-left: auto; 
 	}
-
 	.search-form input {
-		width: 12rem; /* Un ancho más mediano y adecuado para móviles */
+		width: 12rem; 
 	}
 }

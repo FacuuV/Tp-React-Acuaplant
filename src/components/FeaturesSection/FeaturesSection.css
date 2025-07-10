@@ -1,10 +1,7 @@
 .container-features {
     display: flex;
     justify-content: space-around;
-    gap: 1.5rem; /* Reducimos el espacio entre tarjetas */
+    gap: 1.5rem; 
     padding: 4rem 0;
-    /* El color de fondo se hereda de .main-content, 
-       así que no es necesario ponerlo aquí de nuevo
-       a menos que quieras un color diferente para esta sección. */
     flex-wrap: wrap;
 }

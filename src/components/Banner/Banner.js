@@ -1,13 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import './Banner.css';
 
-// 1. Importa todas las imágenes que usarás en el carrusel
-//    ¡Asegúrate de que estas rutas y nombres sean correctos!
 import bannerImage1 from './../../assets/banner.jpg';
-import bannerImage2 from './../../assets/banner2.jpg'; // Reemplaza con tu imagen
-import bannerImage3 from './../../assets/banner3.jpg'; // Reemplaza con tu imagen
+import bannerImage2 from './../../assets/banner2.jpg'; 
+import bannerImage3 from './../../assets/banner3.jpg'; 
 
-// 2. Crea un array con la información de cada slide
 const slides = [
   {
     image: bannerImage1,
@@ -39,18 +36,18 @@ const slides = [
 ];
 
 const Banner = () => {
-  // 3. Estado para saber qué slide está activo
+  
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // 4. Efecto para cambiar el slide automáticamente (ahora cada 7 segundos)
+  
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex(prevIndex => (prevIndex + 1) % slides.length);
-    }, 3500); // <-- Ajustado a 3.5 segundos
-    return () => clearInterval(interval); // Limpia el intervalo al desmontar el componente
+    }, 3500); 
+    return () => clearInterval(interval); 
   }, []);
 
-  // 5. Funciones para los botones de control manual
+ 
   const goToPrevious = () => {
     const isFirstSlide = currentIndex === 0;
     const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
@@ -69,7 +66,7 @@ const Banner = () => {
 
   return (
     <section className="banner">
-      {/* Este wrapper contiene todas las diapositivas y es el que se mueve */}
+      {/* Contenedor de las diapositivas */}
       <div
         className="slides-wrapper"
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}

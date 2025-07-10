@@ -10,7 +10,6 @@ import AccessoriesSection from './components/AccessoriesSection/AccessoriesSecti
 
 function App() {
   return (
-    // Usamos un Fragment (<>...</>) para no añadir un div extra al DOM
     
     <div className="App">
       <Header />
