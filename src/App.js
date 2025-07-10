@@ -6,7 +6,7 @@ import TopCategories from './components/TopCategories/TopCategories';
 import ProductsSection from './components/ProductsSection/ProductsSection';
 import Gallery from './components/Gallery/Gallery';
 import AccessoriesSection from './components/AccessoriesSection/AccessoriesSection';
-
+import BlogSection from './components/BlogSection/BlogSection';
 
 function App() {
   return (
@@ -20,6 +20,7 @@ function App() {
         <ProductsSection />
         <Gallery />
         <AccessoriesSection />
+        <BlogSection />
       </main>
     </div>
   );
