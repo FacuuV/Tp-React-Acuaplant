@@ -4,6 +4,9 @@ import Banner from './components/Banner/Banner';
 import FeaturesSection from './components/FeaturesSection/FeaturesSection';
 import TopCategories from './components/TopCategories/TopCategories';
 import ProductsSection from './components/ProductsSection/ProductsSection';
+import Gallery from './components/Gallery/Gallery';
+
+
 function App() {
   return (
     // Usamos un Fragment (<>...</>) para no añadir un div extra al DOM
@@ -15,6 +18,7 @@ function App() {
         <FeaturesSection />
         <TopCategories />
         <ProductsSection />
+        <Gallery />
       </main>
     </div>
   );

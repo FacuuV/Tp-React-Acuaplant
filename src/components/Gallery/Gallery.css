@@ -1,0 +1,29 @@
+/* ********************************** */
+/*           Fotos Galería            */
+/* ********************************** */
+.gallery {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(2, 30rem);
+	gap: 1.5rem;
+	margin-bottom: 3rem;
+}
+
+.gallery img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 1rem; /* Añadimos bordes redondeados para un look más suave */
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Sombra sutil para dar profundidad */
+	transition: transform 0.3s ease-in-out; /* Transición suave para el hover */
+	cursor: pointer;
+}
+
+.gallery img:hover {
+	transform: scale(1.03); /* Efecto de zoom al pasar el mouse */
+}
+
+.gallery-img-3 {
+	grid-column: 2/4;
+	grid-row: 1/3;
+}
