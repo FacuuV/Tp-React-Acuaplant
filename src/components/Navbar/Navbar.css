@@ -116,8 +116,9 @@
 		top: 100%; /* Justo debajo de la barra de navegación */
 		left: 0;
 		width: 100%;
-		background-color: rgba(255, 255, 255, 0.85); /* Fondo blanco semi-transparente */
-		backdrop-filter: blur(5px); /* Efecto de desenfoque para el contenido de atrás */
+		/* Fondo oscuro y semi-transparente para ver el banner */
+		background-color: rgba(0, 0, 0, 0.301);
+		backdrop-filter: blur(10px); /* Efecto de desenfoque para el contenido de atrás */
 		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 		z-index: 1000; /* Para que aparezca por encima de todo */
 
@@ -127,7 +128,8 @@
 		overflow: hidden; /* Oculta el contenido que se desborda */
 		max-height: 0; /* El menú empieza con altura 0 (cerrado) */
 		padding: 0 2rem; /* Sin padding vertical cuando está cerrado */
-		transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+		transition: max-height 0.4s ease-out, padding 0.4s ease-out, background-color 0.3s;
+		align-items: center; /* Centra los elementos del menú horizontalmente */
 	}
 
 	/* Cuando el menú tiene la clase 'active', lo mostramos */
@@ -138,7 +140,13 @@
 	}
 
 	.menu a {
-		color: var(--dark-color);
+		color: #fff; /* Texto blanco para que se lea bien sobre el fondo oscuro */
+		padding: 1.2rem 0; /* Espaciado vertical para que sea fácil de tocar */
+	}
+
+	.menu a:hover,
+	.menu a:focus {
+		color: var(--primary-color); /* Color de resaltado al pasar el mouse o seleccionar */
 	}
 
 	/* Ajustamos el buscador en móvil */

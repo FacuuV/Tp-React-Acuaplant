@@ -2,16 +2,31 @@
 /*               BANNER               */
 /* ********************************** */
 .banner {
+	position: relative; /* Necesario para posicionar las flechas y puntos */
 	height: 60rem;
+	overflow: hidden; /* Oculta las diapositivas que están fuera de la pantalla */
+}
+
+.slides-wrapper {
+	display: flex;
+	height: 100%;
+	transition: transform 0.8s ease-in-out; /* La animación de deslizamiento */
+}
+
+.slide {
+	flex: 1 0 100%; /* Cada slide ocupa el 100% del ancho y no se encoge */
+	height: 100%;
 	background-size: cover;
 	background-position: center;
-	/* La imagen de fondo la pondremos desde el componente React */
+	display: flex;
+	align-items: center; /* Centra el contenido verticalmente */
+	justify-content: flex-start; /* Alinea el bloque de contenido a la izquierda */
 }
 
 .content-banner {
-	max-width: 90rem;
-	margin: 0 auto;
-	padding: 25rem 0;
+	/* Damos un padding generoso para separarlo del borde y de la flecha */
+	padding-left: 8rem;
+	text-align: left;
 }
 
 .content-banner p {
@@ -37,4 +52,60 @@
 	padding: 1rem 3rem;
 	border-radius: 3rem;
 	text-transform: uppercase;
+}
+
+/* ********************************** */
+/*         ESTILOS CARRUSEL           */
+/* ********************************** */
+.carousel-arrow {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	background-color: rgba(0, 0, 0, 0.4);
+	color: white;
+	padding: 1.5rem;
+	cursor: pointer;
+	z-index: 10;
+	transition: background-color 0.3s ease;
+	border-radius: 50%;
+	width: 2.5rem;
+	height: 2.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.carousel-arrow:hover {
+	background-color: rgba(0, 0, 0, 0.7);
+}
+
+.left-arrow {
+	left: 3rem;
+}
+
+.right-arrow {
+	right: 3rem;
+}
+
+.carousel-dots {
+	position: absolute;
+	bottom: 2rem;
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+	gap: 1rem;
+}
+
+.dot {
+	width: 1.2rem;
+	height: 1.2rem;
+	border-radius: 50%;
+	background-color: rgba(255, 255, 255, 0.5);
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.dot.active,
+.dot:hover {
+	background-color: white;
 }
