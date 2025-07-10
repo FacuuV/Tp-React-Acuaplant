@@ -1,5 +1,5 @@
 import React from 'react';
-import './Footer.css';.
+import './Footer.css';
 import paymentImg from '../../assets/payment.png';
 const infoLinks = [
 	'Acerca de Nosotros',
