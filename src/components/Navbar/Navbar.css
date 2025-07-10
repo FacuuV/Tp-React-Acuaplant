@@ -1,7 +1,6 @@
 /* ************* NAVBAR ************* */
 .container-navbar {
 	background-color: var(--primary-color);
-	border-top: 1px solid #e2e2e2; /* Para separar visualmente del header superior */
 }
 
 .navbar {
@@ -56,7 +55,7 @@
 
 .search-form {
 	position: relative;
-	display: flex; /* Añadido para que align-items funcione */
+	display: flex; 
 	align-items: center;
 	border: 2px solid #000000;
 	border-radius: 2rem;
@@ -74,7 +73,7 @@
 	padding: 0 2rem;
 	color: #777;
 	cursor: pointer;
-	background-color: transparent; /* Asegura que el fondo del input sea transparente */
+	background-color: transparent; 
 }
 
 .search-form input::-webkit-search-cancel-button {
@@ -89,7 +88,7 @@
 	justify-content: center;
 	height: 100%;
 	padding: 1rem;
-	cursor: pointer; /* Añadido para que el botón parezca un botón */
+	cursor: pointer; 
 }
 
 .btn-search i {
